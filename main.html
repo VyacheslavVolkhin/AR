@@ -9,10 +9,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./css/swipebox.min.css" />
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
+    <script src="./js/jquery.min.js" defer></script>
+    <script src="./js/slick.min.js" defer></script>
+    <script src="./js/jquery.swipebox.min.js" defer></script>
+    <script src="./js/jquery.maskedinput.min.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -23,34 +31,879 @@
         <!-- header -->
         <header class="header">
             <div class="inner-wrap">
-                44444
+                <div class="logo-wrap">
+                    <a href="" class="logo">
+                        <picture class="logo-image">
+                            <source srcset="./img/main/logo.png" media="(min-width: 1024px)">
+                            <source srcset="./img/main/logo-small.svg">
+                            <img src="./img/main/logo-small.svg" alt="" />
+                        </picture>
+                    </a>
+                </div>
+                <div class="popup-menu-wrap js-popup-wrap">
+                    <a href="" class="btn-popup btn-action-ico ico-menu js-btn-popup-toggle"><span></span></a>
+                    <div class="popup-content-block js-popup-block">
+                        <a href="" class="btn-popup-close btn-action-ico ico-close js-btn-popup-close"></a>
+                        <div class="menu-wrap">
+                            <ul class="menu">
+                                <li><a href="">Главная</a></li>
+                                <li><a href="">Каталог</a></li>
+                                <li><a href="">О компании</a></li>
+                                <li><a href="">Галерея</a></li>
+                                <li><a href="">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="action-wrap">
+                            <a href="" class="btn button-dark button-border js-popup-open" data-popup="popup-callback">Заказать звонок</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- /header -->
 
+        <!--main-top-box-->
+        <div class="main-top-box cnt-section">
+            <div class="inner-wrap">
+                <div class="title-inner-wrap">
+                    <div class="title-wrap">
+                        <h1 class="page-top-title">Большой выбор спецтехники по лучшим ценам — покупайте прямо&nbsp;сейчас</h1>
+                    </div>
+                    <div class="info-wrap">
+                        <p>Ваш надежный партнер по продаже и&nbsp;аренде&nbsp;спецтехники</p>
+                        <a href="" class="btn button-main">Узнать цены</a>
+                    </div>
+                </div>
+                <div class="items-wrap">
+                    <!--item wrap-->
+                    <div class="item-wrap wrap-link">
+                        <a href="" target="_blank" class="item-tile-link tile-photo photo-cover">
+                            <img src="./img/top01.jpg" alt="">
+                            <span class="tile-title">наш каталог</span>
+                        </a>
+                    </div>
+                    <!--/item wrap-->
+                    <!--item wrap-->
+                    <div class="item-wrap wrap-photo">
+                        <div class="tile-photo">
+                            <img src="./img/top02.jpg" alt="">
+                        </div>
+                    </div>
+                    <!--/item wrap-->
+                </div>
+            </div>
+        </div>
+        <!--/main-top-box-->
+
         <!-- page -->
-        <div class="page">
-            2222
+        <div class="page-full">
+
+            <div class="bg-catalog-box">
+                <!--catalog-box-->
+                <div class="catalog-box">
+                    <div class="title-box">
+                        <h2 class="page-main-title">Каталог</h2>
+                    </div>
+                    <div class="items-wrap">
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Фронтальный погрузчик LONKING CDM932N</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat01.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Фронтальный погрузчик Lonking CDM936N</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat02.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Гидравлический экскаватор Lonking CDM6025</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Фронтальный погрузчик LONKING CDM932N</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat04.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Фронтальный погрузчик Lonking CDM936N</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat05.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-catalog">
+                                <a href="" class="tile-link"></a>
+                                <div class="tile-title-wrap">
+                                    <div class="tile-title">Гидравлический экскаватор Lonking CDM6025</div>
+                                </div>
+                                <div class="tile-photo-wrap">
+                                    <div class="tile-photo photo-cover">
+                                        <img src="./img/cat06.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="tile-info-wrap">
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Эксплутационная масса:</div>
+                                        <div class="tile-info-value">5500 кг</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Стандартный ковш:</div>
+                                        <div class="tile-info-value">1,2 м³</div>
+                                    </div>
+                                    <div class="tile-info">
+                                        <div class="tile-info-title">Высота подъёма:</div>
+                                        <div class="tile-info-value">1500 кг</div>
+                                    </div>
+                                </div>
+                                <div class="tile-actions-wrap">
+                                    <div class="tile-price-wrap">
+                                        <div class="tile-price">От 349 000 руб</div>
+                                    </div>
+                                    <a href="" class="btn">Заказать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                    </div>
+                    <div class="more-box">
+                        <a href="" class="link-main">Посмотреть ещё</a>
+                    </div>
+                </div>
+                <!--/catalog-box-->
+
+                <!--catalog-slider-box-->
+                <div class="catalog-slider-box">
+                    <div class="title-box">
+                        <h2 class="page-main-title">Популярные позиции</h2>
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider">
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Фронтальный погрузчик LONKING CDM932N</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat07.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Фронтальный погрузчик Lonking CDM936N</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat08.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Гидравлический экскаватор Lonking CDM6025</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat09.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Фронтальный погрузчик Lonking CDM936N</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat08.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Гидравлический экскаватор Lonking CDM6025</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat09.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Фронтальный погрузчик LONKING CDM932N</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat07.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Фронтальный погрузчик Lonking CDM936N</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat08.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                            <!--item wrap-->
+                            <div class="sl-wrap">
+                                <div class="item-tile-catalog">
+                                    <a href="" class="tile-link"></a>
+                                    <div class="tile-title-wrap">
+                                        <div class="tile-title">Гидравлический экскаватор Lonking CDM6025</div>
+                                    </div>
+                                    <div class="tile-photo-wrap">
+                                        <div class="tile-photo photo-cover">
+                                            <img src="./img/cat09.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tile-info-wrap">
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Эксплутационная масса:</div>
+                                            <div class="tile-info-value">5500 кг</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Стандартный ковш:</div>
+                                            <div class="tile-info-value">1,2 м³</div>
+                                        </div>
+                                        <div class="tile-info">
+                                            <div class="tile-info-title">Высота подъёма:</div>
+                                            <div class="tile-info-value">1500 кг</div>
+                                        </div>
+                                    </div>
+                                    <div class="tile-actions-wrap">
+                                        <div class="tile-price-wrap">
+                                            <div class="tile-price">От 349 000 руб</div>
+                                        </div>
+                                        <a href="" class="btn">Заказать</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/item wrap-->
+                        </div>
+                    </div>
+                    <div class="more-box elm-hidden-desktop">
+                        <a href="" class="link-main">Посмотреть ещё</a>
+                    </div>
+                </div>
+                <!--/catalog-slider-box-->
+            </div>
+
+            <!--order-box-->
+            <div class="bg-box">
+                <div class="order-box">
+                    <form action="/" class="form-inner-wrap">
+                        <div class="frm-title-wrap">
+                            <div class="frm-title">оставьте заявку</div>
+                            <p>Наш менеджер свяжется с вами и ответит на все интересующие вас вопросы</p>
+                        </div>
+                        <div class="frm-wrap">
+                            <div class="frm-row">
+                                <div class="frm-field field-half">
+                                    <div class="frm-field-title">Ваше имя*</div>
+                                    <input type="text" class="form-input" placeholder="Имя">
+                                </div>
+                                <div class="frm-field field-half">
+                                    <div class="frm-field-title">Номер телефона*</div>
+                                    <input type="text" class="form-input" placeholder="Номер телефона">
+                                </div>
+                            </div>
+                            <div class="frm-row">
+                                <div class="frm-field field-half">
+                                    <div class="frm-field-title">Электронная почта*</div>
+                                    <input type="text" class="form-input" placeholder="Электронная почта">
+                                </div>
+                                <div class="frm-field field-half">
+                                    <div class="frm-field-title">ИНН*</div>
+                                    <input type="text" class="form-input" placeholder="ИНН">
+                                </div>
+                            </div>
+                            <div class="frm-row row-text">
+                                <div class="frm-field">
+                                    <div class="frm-field-title">Оставьте комментарий</div>
+                                    <textarea class="form-input" placeholder=""></textarea>
+                                </div>
+                            </div>
+                            <div class="frm-row-submit">
+                                <div class="frm-field field-info">Нажимая на кнопку «отправить» вы даете согласие на <a href="">обработку персональных данных</a> и&nbsp;соглашаетесь с <a href="">политикой конфиденциальности</a></div>
+                                <div class="frm-field field-button">
+                                    <button type="submit" class="btn button-main">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--/order-box-->
+
+            <!--pluses-box-->
+            <div class="pluses-box">
+                <div class="title-box">
+                    <h2 class="page-main-title">Почему мы</h2>
+                </div>
+                <div class="box-inner-wrap">
+                    <div class="title-inner-wrap">
+                        <div class="inner-title">Несколько причин выбрать&nbsp;нас</div>
+                        <div class="elm-photo">
+                            <img src="./img/photo01.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="info-inner-wrap">
+                        <h3 class="info-title">Огромный выбор техники</h3>
+                        <p>У нас в наличии широкий ассортимент спецтехники разных марок и моделей. Вы&nbsp;сможете найти именно то, что&nbsp;подходит для ваших нужд</p>
+                        <h3 class="info-title">Качественная техника</h3>
+                        <p>Мы работаем только с проверенными производителями и поставщиками, что гарантирует высокое качество и&nbsp;надежность нашей техники. Вы&nbsp;можете быть уверены в&nbsp;ее долговечности и эффективности</p>
+                        <h3 class="info-title">Конкурентные цены</h3>
+                        <p>Мы предлагаем конкурентные и&nbsp;привлекательные цены на все предлагаемые нами модели спецтехники. Мы&nbsp;стремимся сделать нашу продукцию доступной для всех клиентов</p>
+                        <h3 class="info-title">Послепродажное обслуживание</h3>
+                        <p>Мы ценим наших клиентов и стремимся обеспечить всестороннюю поддержку после покупки. Мы предлагаем гарантийное обслуживание и регулярное техническое обслуживание для вашей спецтехники.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/pluses-box-->
+
+            <!--bg-box-->
+            <div class="bg-box">
+                <div class="faq-box">
+                    <div class="title-box">
+                        <h2 class="page-main-title">Вопрос-ответ</h2>
+                    </div>
+                    <div class="items-wrap">
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-faq js-popup-wrap no-close">
+                                <a href="" class="btn-popup js-btn-popup-toggle">Какую спецтехнику вы предлагаете?</a>
+                                <div class="popup-content-block js-popup-block">
+                                    <p>Мы предоставляем гарантии на всю технику, которая приобретается у нас. Гарантийные условия конкретизируются для каждого продукта и обсуждаются перед совершением покупки. Кроме того, мы также предлагаем послепродажное обслуживание и сервисное обслуживание для&nbsp;долгосрочной поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-faq js-popup-wrap no-close">
+                                <a href="" class="btn-popup js-btn-popup-toggle">Какие условия покупки спецтехники?</a>
+                                <div class="popup-content-block js-popup-block">
+                                    <p>Мы предоставляем гарантии на всю технику, которая приобретается у нас. Гарантийные условия конкретизируются для каждого продукта и обсуждаются перед совершением покупки. Кроме того, мы также предлагаем послепродажное обслуживание и сервисное обслуживание для&nbsp;долгосрочной поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-faq js-popup-wrap no-close">
+                                <a href="" class="btn-popup js-btn-popup-toggle active">Какие гарантии предоставляются на покупаемую технику?</a>
+                                <div class="popup-content-block js-popup-block">
+                                    <p>Мы предоставляем гарантии на всю технику, которая приобретается у нас. Гарантийные условия конкретизируются для каждого продукта и обсуждаются перед совершением покупки. Кроме того, мы также предлагаем послепродажное обслуживание и сервисное обслуживание для&nbsp;долгосрочной поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-faq js-popup-wrap no-close">
+                                <a href="" class="btn-popup js-btn-popup-toggle">Как быстро осуществляется доставка техники?</a>
+                                <div class="popup-content-block js-popup-block">
+                                    <p>Мы предоставляем гарантии на всю технику, которая приобретается у нас. Гарантийные условия конкретизируются для каждого продукта и обсуждаются перед совершением покупки. Кроме того, мы также предлагаем послепродажное обслуживание и сервисное обслуживание для&nbsp;долгосрочной поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                        <!--item wrap-->
+                        <div class="item-wrap">
+                            <div class="item-tile-faq js-popup-wrap no-close">
+                                <a href="" class="btn-popup js-btn-popup-toggle">Можно ли получить консультацию перед покупкой спецтехники?</a>
+                                <div class="popup-content-block js-popup-block">
+                                    <p>Мы предоставляем гарантии на всю технику, которая приобретается у нас. Гарантийные условия конкретизируются для каждого продукта и обсуждаются перед совершением покупки. Кроме того, мы также предлагаем послепродажное обслуживание и сервисное обслуживание для&nbsp;долгосрочной поддержки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/item wrap-->
+                    </div>
+                </div>
+            </div>
+            <!--/bg-box-->
+
+            <!--question-box-->
+            <div class="question-box">
+                <div class="box-inner-wrap">
+                    <div class="title-inner-wrap">
+                        <h2 class="page-main-title">У вас остались вопросы?</h2>
+                        <p>Наш менеджер свяжется с вами и&nbsp;ответит на все интересующие вас вопросы</p>
+                        <a href="" class="btn button-main">Задать вопрос</a>
+                    </div>
+                    <div class="photo-inner-wrap">
+                        <div class="elm-photo photo-cover">
+                            <img src="./img/photo02.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/question-box-->
+
         </div>
         <!-- /page -->
 
 
         <!-- footer -->
         <footer class="footer">
-            <div class="inner-wrap">
-                333333
+            <!--footer-main-panel-->
+            <div class="footer-main-panel cnt-section">
+                <div class="inner-wrap">
+                    <div class="logo-wrap">
+                        <a href="" class="logo">
+                            <img src="./img/main/logo-small.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="menu-wrap">
+                        <ul class="menu">
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">Каталог</a></li>
+                            <li><a href="">О компании</a></li>
+                            <li><a href="">Галерея</a></li>
+                            <li><a href="">Контакты</a></li>
+                        </ul>
+                        <ul class="menu">
+                            <li><a href="">Политика <br> конфиденциальности</a></li>
+                            <li><a href="">Договор <br> оферты</a></li>
+                            <li><a href="">Способы <br> оплаты</a></li>
+                        </ul>
+                    </div>
+                    <div class="contacts-wrap">
+                        <div class="cnt-wrap cnt01">
+                            <div class="footer-title">Почта</div>
+                            <p><a href="mailto:info@autoresource.ru">info@autoresource.ru</a></p>
+                        </div>
+                        <div class="cnt-wrap cnt02">
+                            <div class="footer-title">Телефон</div>
+                            <p><a href="tel:89203333377">+7 (920) 333‑33‑77</a></p>
+                        </div>
+                        <div class="cnt-wrap cnt03">
+                            <div class="footer-title">Адрес</div>
+                            <p>г. Москва, <br>ул. Покровская, д. 18</p>
+                        </div>
+                        <div class="soc-wrap">
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/soc01.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/soc02.svg" alt="">
+                            </a>
+                            <a href="" class="btn-action-ico button-soc">
+                                <img src="./img/icons/soc03.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!--/footer-main-panel-->
+            <!--footer-bottom-panel-->
+            <div class="footer-bottom-panel cnt-section">
+                <div class="inner-wrap">
+                    <p>© 2023 Авторесурс. Все права защищены. 14+</p>
+                </div>
+            </div>
+            <!--/footer-bottom-panel-->
         </footer>
         <!-- /footer -->
+
+
+        <div class="popup-outer-box" id="popup-callback">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup">
+                        <div class="frm-title">Заполните ваши <br>данные</div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="frm-field-title">Ваше имя<span class="frm-req">*</span></div>
+                                <input type="text" class="form-input" placeholder="Имя">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="frm-field-title">Номер телефона<span class="frm-req">*</span></div>
+                                <input type="text" class="form-input" placeholder="Номер телефона">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="frm-field-title">Электронная почта<span class="frm-req">*</span></div>
+                                <input type="text" class="form-input" placeholder="Электронная почта">
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="frm-field-title">ИНН<span class="frm-req">*</span></div>
+                                <input type="text" class="form-input" placeholder="ИНН">
+                            </div>
+                        </div>
+                        <div class="frm-row row-text">
+                            <div class="frm-field">
+                                <div class="frm-field-title">Оставьте комментарии</div>
+                                <textarea class="form-input" placeholder=""></textarea>
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-info">Нажимая на кнопку «отправить» вы даете согласие на&nbsp;обработку <a href="" class="link-main">персональных данных</a> и соглашаетесь с&nbsp;<a href="" class="link-main">политикой конфиденциальности</a></div>
+                            <div class="frm-field field-button">
+                                <button type="submit" class="btn button-main">Отправить</button>
+                            </div>
+                            <div class="frm-field field-close">
+                                <a href="" class="btn-action-back js-popup-close">Вернуться на сайт</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
+
+        <div class="popup-outer-box popup-message" id="popup-message">
+            <div class="popup-box">
+                <a href="" class="btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-content-wrap">
+                    <div class="popup-message-box">
+                        <div class="popup-title">ВАША ЗАЯВКА ПРИНЯТА</div>
+                        <p>Спасибо за уделенное время. <br>Наш менеджер свяжется с вами в&nbsp;ближайшее время. </p>
+                        <a href="" class="btn-action-back js-popup-close">Вернуться на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/popup-outer-box-->
 
     </div>
     <!-- /wrap -->
 
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.fancybox.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/jquery.maskedinput.min.js"></script>
-    <script src="./js/scripts.js"></script>
+
 
 </body>
 

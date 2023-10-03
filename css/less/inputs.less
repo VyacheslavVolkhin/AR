@@ -1,0 +1,311 @@
+/* ----------------------------------- *\
+			inputs elements styles
+\* ----------------------------------- */
+.form-input[placeholder] {
+    text-overflow: ellipsis;
+}
+.form-input {
+    text-overflow: ellipsis;
+    height: 66px;
+    border-radius: 20px;
+    border: 1px solid #EFEFEF;
+    background: #fff;
+    padding: 0 10px 0 27px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    color: var(--clr-base);
+    text-align: left;
+    &.inp-valid {
+        border-color: #27AE60;
+        border-width: 2px;
+        padding-left: 26px;
+        padding-right: 9px;
+    }
+    &.inp-error {
+        border-color: #EB5757;
+        border-width: 2px;
+        padding-left: 26px;
+        padding-right: 9px;
+    }
+}
+textarea.form-input {
+    height: 128px;
+    line-height: normal;
+    padding-top: 20px;
+}
+select.form-input {
+    display: block;
+    text-overflow: ellipsis;
+    width: 100%;
+    padding-right: 30px;
+    background-image: url(../img/icons/arrow-select.svg);
+    background-position: right 20px center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    appearance: none!important;
+    line-height: 1em;
+    text-indent: 0.01px;
+    //text-overflow: '';
+    outline: none;
+    &.form-input-clear {
+        height: auto;
+        border: none;
+        min-height: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        line-height: inherit;
+        padding: 0 16px 0 0;
+        color: inherit;
+        font-weight: bold;
+        background-image: url(../img/icons/arrow-select.png);
+        background-size: 8px auto;
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+//   <select class="form-input form-input-line" required>
+//       <option value="" disabled selected hidden>Выбрать</option>
+//       <option>Пункт списка</option>
+//   </select>
+select.form-input:required:invalid {
+    color: #ADADAD;
+}
+[placeholder]::-webkit-input-placeholder {color: #EFEFEF;}
+[placeholder]:-moz-placeholder {color: #EFEFEF;}
+[placeholder]::-moz-placeholder {color: #EFEFEF;}
+[placeholder]:-ms-input-placeholder {color: #EFEFEF;}
+.btn {
+    height: 60px;
+    border-radius: 30px;
+    background: var(--clr-att);
+    border: 1px solid var(--clr-att);
+    padding: 0 30px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    &:hover {
+        background-color: var(--clr-att-second);
+        border-color: var(--clr-att-second);
+        color: var(--clr-att);
+    }
+    &:active {
+        background-color: var(--clr-att);
+        border-color: var(--clr-att);
+        color: #fff;
+    }
+    &.button-dark {
+        &:not(:hover, :active) {
+            background-color: var(--clr-base);
+            border-color: var(--clr-base);
+        }
+        &.button-border {
+            &:not(:hover, :active) {
+                background-color: transparent;
+                color: var(--clr-base);
+            }
+        }
+    }
+    &.button-main {
+        min-width: 260px;
+    }
+    &.button-border {
+        &:not(:hover, :active) {
+            background-color: transparent;
+            color: var(--clr-att);
+        }
+    }
+    .button-ico {
+        width: 24px;
+        height: 24px;
+        margin: 0 10px;
+        transition: all ease 0.2s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    .button-title {
+        &[data-title] {
+            &:before {
+                content: attr(data-title);
+            }
+        }
+    }
+    &.active {
+        .button-title {
+            &[data-title-active] {
+                &:before {
+                    content: attr(data-title-active);
+                }
+            }
+        }
+    }
+}
+.btn-action-back {
+    display: inline-block;
+    position: relative;
+    color: var(--clr-base);
+    padding: 0 0 0 15px;
+    &:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        background: url(../img/icons/arrow-back.svg) center no-repeat;
+        background-size: 100% auto;
+        top: 50%;
+        left: 0;
+        margin-top: -5px;
+    }
+    &:hover {
+        color: var(--clr-base);
+        opacity: 0.8;
+    }
+}
+.btn-action-ico {
+    min-width: 0;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 40px;height: 40px;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    transition: all ease 0.2s;
+    flex-shrink: 0;
+    &:not(.btn) {
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+    &.btn {
+        min-width: 0;
+        min-height: 0;
+        padding: 0;
+        display: block;
+    }
+    &:before, &:after, [class*="icon-"], img, svg {
+        display: block;
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        margin: auto;
+        max-width: 100%;
+        max-height: 100%;
+        transition: all ease 0.2s;
+    }
+    img, svg {
+        max-width: 24px;
+        max-height: 24px;
+    }
+    &:before, &:after {
+        content: "";
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px auto;
+    }
+    &:hover {
+        text-decoration: none;
+        &:not(.btn) {
+            background: none;
+            box-shadow: none;
+        }
+    }
+    &.ico-arrow {
+        z-index: 20;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #fff;
+        &:before {
+            background-image: url(../img/icons/arrow-slider.svg);
+            background-size: 100% auto;
+        }
+        &:hover {
+            background: var(--clr-att);
+            &:before {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    &.ico-arrow-next {
+        &:before {
+            .t-rotate(180deg);
+        }
+    }
+    &.ico-menu {
+        width: 60px;
+        height: 60px;
+        &:after, &:before, span {
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 6px;
+            border-radius: 3px;
+            background: #505050;
+            margin: -3px 0 0 -25px;
+            top: 50%;
+            left: 50%;
+            right: auto;
+            bottom: auto;
+        }
+        &:before {
+            margin-top: -20px;
+        }
+        &:after {
+            margin-top: 14px;
+        }
+    }
+    &.ico-close {
+        &:after, &:before {
+            width: 24px;
+            height: 2px;
+            top: 50%;
+            left: 50%;
+            bottom: auto;
+            right: auto;
+            margin: -1px 0 0 -12px;
+            background: #1D212D;
+        }
+        &:before {
+            .t-rotate(45deg);
+        }
+        &:after {
+            .t-rotate(-45deg);
+        }
+    }
+    &.button-soc {
+        border-radius: 50%;
+        background: #fff;
+        img, svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &:hover {
+            opacity: 0.8;
+            background-color: #fff;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .form-input {
+        padding-left: 3.9rem;
+    }
+}
