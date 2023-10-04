@@ -108,6 +108,30 @@ popupElements.forEach(element => {
 })
 
 
+//filter toggle
+const buttonFilterToggle = document.querySelector('.js-filter-toggle')
+if (buttonFilterToggle) {
+	buttonFilterToggle.addEventListener('click', function(e) {
+		document.body.classList.toggle('filter-open')
+		e.preventDefault()
+		e.stopPropagation()
+		return false;
+	})
+}
+
+//features popup
+const buttonFeaturesToggle = document.querySelectorAll('.js-features-toggle')
+if (buttonFeaturesToggle) {
+	for (i = 0;i < buttonFeaturesToggle.length;i++) {
+		buttonFeaturesToggle[i].addEventListener('click', function(e) {
+			document.body.classList.toggle('features-open')
+			e.preventDefault()
+			e.stopPropagation()
+			return false;
+		})
+	}
+}
+
 $(document).ready(function () {
 
 	//popups

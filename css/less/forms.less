@@ -1,6 +1,80 @@
 /* ----------------------------------- *\
 			forms elements styles
 \* ----------------------------------- */
+.frm-select-wrap {
+    position: relative;
+    .btn-popup {
+        display: block;
+        line-height: 55px;
+        height: 55px;
+        padding: 0 20px 0 20px;
+        white-space: nowrap;
+        max-width: 100%;
+        text-overflow: ellipsis;
+        position: relative;
+        overflow: hidden;
+        color: #212126;
+        &:before {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: url(../img/icons/arrow-toggle.svg) center no-repeat;
+            background-size: 100% auto;
+            top: 50%;
+            right: -5px;
+            margin-top: -12px;
+        }
+        &:hover {
+            color: #212126;
+        }
+        &.active {
+            &:before {
+                .t-rotate(180deg);
+            }
+        }
+    }
+    .select-content-block {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        border-radius: 0 0 10px 10px;
+        background: #fff;
+        overflow: hidden;
+        z-index: -1;
+    }
+    .menu {
+        a {
+            color: #212126;
+            padding: 14px 10px 14px 20px;
+            display: block;
+            position: relative;
+            &:hover, &.active {
+                background-color: #EFEFEF;
+                color: var(--clr-base);
+            }
+        }
+    }
+}
+.frm-main-search {
+    display: block;
+    position: relative;
+    .form-input {
+        height: 48px;
+        padding: 0 40px 0 19px;
+    }
+    .btn-action-ico {
+        width: 52px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+}
 .frm-popup {
     margin: 0 auto;
     max-width: 380px;
@@ -93,7 +167,82 @@
         }
 	}
 }
-
+.frm-select {
+    color: #878D99;
+    &.sel-main {
+        color: var(--clr-base);
+    }
+    label {
+        padding-left: 34px;
+        min-height: 24px;
+        line-height: 24px;
+        &:before, &:after {
+            width: 24px;
+            height: 24px;
+            border-radius: 5px;
+            border: 1px solid #878D99;
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            margin: -12px 0 0 -12px;
+        }
+        &:after {
+            opacity: 0;
+            border: none;
+            background: var(--clr-att) url(../img/icons/chk.svg) center no-repeat;
+            background-size: 17px auto;
+        }
+    }
+    input {
+        &:checked {
+            &~label {
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1023px) {
+    .frm-select-wrap {
+        .btn-popup {
+            height: 44px;
+            padding: 0 40px 0 15px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            background-color: #fff;
+            width: 100%;
+            line-height: 44px;
+            z-index: 5;
+            &:before {
+                right: 10px;
+                .t-rotate(-90deg);
+            }
+            &.active {
+                &:before {
+                    .t-rotate(180deg);
+                }
+            }
+        }
+        .select-content-block {
+            position: relative;
+            top: 0;
+            left: auto;
+            right: auto;
+            margin-left: calc(var(--paddingContainer) * -1);
+            margin-right: calc(var(--paddingContainer) * -1);
+            width: auto;
+            max-width: inherit;
+            font-size: 14px;
+            z-index: 1;
+            .menu {
+                a {
+                    padding: 10px 20px 10px 35px;
+                }
+            }
+        }
+    }
+}
 @media (min-width: 768px) {
     .frm-popup {
         .frm-title {
@@ -111,6 +260,19 @@
         }
         .field-info {
             margin-bottom: 25px;
+        }
+    }
+}
+@media (min-width: 1024px) {
+    .frm-main-search {
+        .form-input {
+            height: 55px;
+            font-size: 18px;
+            padding-left: 19px;
+            padding-right: 50px;
+        }
+        .btn-action-ico {
+            width: 60px;
         }
     }
 }
