@@ -108,6 +108,7 @@ popupElements.forEach(element => {
 })
 
 
+
 //filter toggle
 const buttonFilterToggle = document.querySelector('.js-filter-toggle')
 if (buttonFilterToggle) {
@@ -133,6 +134,17 @@ if (buttonFeaturesToggle) {
 }
 
 $(document).ready(function () {
+	
+	
+	//faq
+	$('.item-tile-faq .btn-popup').on('click', function() {
+		if ($(this).hasClass('open')) {
+			$(this).removeClass('open').next('.popup-content-block').slideUp(200);
+		} else {
+			$(this).addClass('open').next('.popup-content-block').slideDown(200);
+		}
+		return false;
+	})
 
 	//popups
 	let popupCurrent;
