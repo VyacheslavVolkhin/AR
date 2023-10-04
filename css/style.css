@@ -340,6 +340,9 @@ body {
 .footer a:not(:hover) {
   color: inherit;
 }
+.footer a:hover {
+  color: var(--clr-att);
+}
 .footer-bottom-panel {
   border-top: 1px solid #828282;
   font-size: 14px;
@@ -824,7 +827,7 @@ body {
   display: none;
   background: #fff;
   padding: 20px 17px;
-  animation: fadeinslide ease 0.2s;
+  animation: none;
 }
 .item-tile-catalog {
   display: -ms-flexbox;
@@ -929,6 +932,9 @@ body {
 }
 .item-tile-link:hover {
   color: #fff;
+}
+.item-tile-link:hover.tile-photo:after {
+  opacity: 0.5;
 }
 .item-tile-link:hover.tile-photo:before {
   background-color: #FFE5DA;
@@ -1669,6 +1675,7 @@ body {
   display: block;
   font-size: 14px;
   letter-spacing: -0.28px;
+  margin-bottom: 5px;
 }
 .order-box .frm-row,
 .order-box .frm-row-submit {
@@ -3083,8 +3090,11 @@ select.form-input:required:invalid {
   max-height: 100%;
 }
 .btn-action-ico.button-soc:hover {
-  opacity: 0.8;
-  background-color: #fff;
+  background: var(--clr-att);
+}
+.btn-action-ico.button-soc:hover img,
+.btn-action-ico.button-soc:hover svg {
+  filter: brightness(0) invert(1);
 }
 .btn-action-ico.button-page {
   width: 52px;
@@ -3206,7 +3216,7 @@ select.form-input:required:invalid {
   font-size: 14px;
   letter-spacing: -0.28px;
   color: var(--clr-light);
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 .frm-popup .field-info {
   font-size: 12px;
@@ -3371,6 +3381,16 @@ select.form-input:required:invalid {
 /* ----------------------------------- *\
 		common styles
 \* ----------------------------------- */
+@keyframes fade_in_show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 @keyframes flash {
   0% {
     opacity: 0.55;

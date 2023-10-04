@@ -324,8 +324,10 @@ select.form-input:required:invalid {
             max-height: 100%;
         }
         &:hover {
-            opacity: 0.8;
-            background-color: #fff;
+            background: var(--clr-att);
+            img, svg {
+                filter: brightness(0) invert(1);
+            }
         }
     }
     &.button-page {

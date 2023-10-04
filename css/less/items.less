@@ -106,7 +106,7 @@
         display: none;
         background: #fff;
         padding: 20px 17px;
-        animation: fadeinslide ease 0.2s;
+        animation: none;
     }
 }
 .item-tile-catalog {
@@ -204,6 +204,9 @@
     &:hover {
         color: #fff;
         &.tile-photo {
+            &:after {
+                opacity: 0.5;
+            }
             &:before {
                 background-color: #FFE5DA;
             }
