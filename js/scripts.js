@@ -107,7 +107,29 @@ popupElements.forEach(element => {
 	}
 })
 
-
+//gallery
+const buttonGalleryToggle = document.querySelectorAll('.js-gallery')
+if (buttonGalleryToggle) {
+	for (i = 0;i < buttonGalleryToggle.length;i++) {
+		buttonGalleryToggle[i].addEventListener('click', function(e) {
+			this.nextElementSibling.classList.toggle('active')
+			e.preventDefault()
+			e.stopPropagation()
+			return false;
+		})
+	}
+}
+const buttonGalleryOpen = document.querySelectorAll('.item-tile-gallery')
+if (buttonGalleryOpen) {
+	for (i = 0;i < buttonGalleryOpen.length;i++) {
+		buttonGalleryOpen[i].addEventListener('click', function(e) {
+			this.classList.toggle('active')
+			e.preventDefault()
+			e.stopPropagation()
+			return false;
+		})
+	}
+}
 
 //filter toggle
 const buttonFilterToggle = document.querySelector('.js-filter-toggle')
@@ -134,6 +156,7 @@ if (buttonFeaturesToggle) {
 }
 
 $(document).ready(function () {
+	
 	
 	
 	//faq
