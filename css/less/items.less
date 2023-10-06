@@ -10,10 +10,16 @@
     z-index: 30;
     border-radius: 5rem;
     aspect-ratio: inherit;
-    display: none;
+    display: block;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all ease 0.2s;
     &.active {
-        animation: fade_in_show ease 0.2s;
-        display: block;
+        visibility: visible;
+        transform: scale(1);
+    }
+    &:not(.active) {
+        pointer-events: none;
     }
 }
 .item-tile-catalog-photo {
